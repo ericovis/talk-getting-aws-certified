@@ -18,16 +18,20 @@
       </div>
     </div>
     <%= stylesheet_link_tag "atom-one-light" %>
-    <%= javascript_include_tag "highlight" %>
     <%= javascript_include_tag "reveal" %>
+    <%= javascript_include_tag "head.min" %>
     <script type="text/javascript">
       Reveal.initialize({
         width: 1920,
         height: 1080,
         transition: 'zoom',
         center: true,
+        dependencies: [
+          { src: 'javascripts/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'javascripts/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'javascripts/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
       });
-      hljs.initHighlightingOnLoad();
     </script>
   </body>
 </html>
