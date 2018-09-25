@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title%></title>
+    <%= stylesheet_link_tag "reveal" %>
+    <%= stylesheet_link_tag "theme" %>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel=stylesheet />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <%= yield %>
+      </div>
+    </div>
+    <%= stylesheet_link_tag "atom-one-light" %>
+    <%= javascript_include_tag "highlight" %>
+    <%= javascript_include_tag "reveal" %>
+    <script type="text/javascript">
+      Reveal.initialize({
+        width: 1920,
+        height: 1080,
+        transition: 'zoom',
+        center: true,
+      });
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
