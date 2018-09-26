@@ -83,9 +83,6 @@ strong {
 .certs img {
 	border: none !important;
 	box-shadow: none !important;
-	width: 10%;
-	height: 10%;
-	text-align: center;
 }
 
 .profile-pic {
@@ -93,6 +90,24 @@ strong {
 	height: auto;
 }
 
-i {
+.theme-color {
 	color: $main-color;
+}
+
+.full-width-gif {
+	width: 100%;
+	height: auto;
+	align-items: center;
+	position: absolute;
+	background-color: black;
+}
+
+.text-shadow {
+	text-shadow: 4px 4px #333;
+}
+
+.no-shadow {
+	border: none !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
 }
