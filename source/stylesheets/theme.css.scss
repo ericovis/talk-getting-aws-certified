@@ -13,10 +13,10 @@
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #fefefe;
 
-$theme-color: #0085a1;
+$main-color: #0085a1;
 $text-color: #555;
-$darken-theme-color: #006D81;
-$lighten-theme-color: #00C6EB;
+$darken-main-color: #006D81;
+$lighten-main-color: #00C6EB;
 
 $mainColor: $text-color ;
 $headingColor: $text-color;
@@ -28,11 +28,11 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: 500;
-$linkColor: $darken-theme-color;
+$linkColor: $darken-main-color;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 2.5em;
+$heading1Size: 2em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
@@ -56,5 +56,43 @@ strong {
 	text-shadow: none;
 	box-shadow: none;
 	border: 0;
-	color: $theme-color;
+	color: $main-color;
+}
+
+.muted {
+	color: #888 !important;
+}
+
+.medium {
+	font-size: 3rem !important;
+}
+
+
+.small {
+	font-size: 2rem !important;
+}
+
+.half {
+	width: 40%;
+}
+
+.title {
+	padding-bottom: 4rem !important;
+}
+
+.certs img {
+	border: none !important;
+	box-shadow: none !important;
+	width: 10%;
+	height: 10%;
+	text-align: center;
+}
+
+.profile-pic {
+	width: 50%;
+	height: auto;
+}
+
+i {
+	color: $main-color;
 }
